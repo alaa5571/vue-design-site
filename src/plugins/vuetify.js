@@ -5,23 +5,15 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
   theme: {
-    dark: false,
+    dark: String(localStorage.mode).toLowerCase() == "true" ? true : false,
     themes: {
       light: {
-        primary: "#999",
-        success: "#858",
-        secondary: "#158",
-        accent: "#000",
-        error: "#415",
-        mainColor: localStorage.mainColor ? localStorage.mainColor : "#edc307"
+        error: "#ff3333",
+        mainColor: localStorage.mainColor ? localStorage.mainColor : "#da7410"
       },
       dark: {
-        primary: "#999",
-        success: "#858",
-        secondary: "#158",
-        accent: "#000",
-        error: "#415",
-        mainColor: localStorage.mainColor ? localStorage.mainColor : "#edc307"
+        error: "#ff3333",
+        mainColor: localStorage.mainColor ? localStorage.mainColor : "#da7410"
       }
     }
   }
